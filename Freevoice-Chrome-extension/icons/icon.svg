@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#1a1a2e"/>
+  <!-- Yellow megaphone icon - filled version -->
+  <g fill="#EAB308">
+    <!-- Main megaphone body -->
+    <path d="M24 52 L96 28 L96 100 L24 76 L24 52 Z M28 54 L28 74 L92 94 L92 34 L28 54 Z"/>
+    <!-- Sound wave arc -->
+    <path d="M56 84 C48 86 40 80 38 72 C36 64 42 56 50 54 L52 60 C46 62 42 68 44 74 C46 80 52 84 58 82 L56 84 Z"/>
+    <!-- Small sound line -->
+    <path d="M96 76 C96 76 86 84 76 84 L76 78 C84 78 92 72 92 72 L96 76 Z"/>
+  </g>
+</svg>

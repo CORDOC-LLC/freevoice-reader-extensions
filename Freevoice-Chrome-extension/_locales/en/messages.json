@@ -1,0 +1,18 @@
+{
+  "appName": {
+    "message": "FreeVoice Reader",
+    "description": "The name of the extension"
+  },
+  "appDescription": {
+    "message": "Convert any text to natural speech. 50+ voices, 7 languages. Runs 100% locally - your text stays private.",
+    "description": "The description of the extension"
+  },
+  "readSelection": {
+    "message": "Read with FreeVoice",
+    "description": "Context menu option to read selected text"
+  },
+  "readArticle": {
+    "message": "Read entire article",
+    "description": "Context menu option to read entire article"
+  }
+}

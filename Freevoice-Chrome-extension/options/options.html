@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeVoice Reader - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <header class="options-header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="logo-icon">
+          <path d="m3 11 18-5v12L3 14v-3z"/>
+          <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+          <path d="M21 15s-2.2 2-4.5 2"/>
+        </svg>
+        <h1>FreeVoice Reader Settings</h1>
+      </div>
+      <div class="privacy-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        100% Private
+      </div>
+    </header>
+
+    <main class="options-main">
+      <!-- Voice Setting -->
+      <section class="settings-section">
+        <div class="setting-row">
+          <div class="setting-info">
+            <label for="default-voice">Default Voice</label>
+            <span class="setting-description">Choose the voice for text-to-speech</span>
+          </div>
+          <select id="default-voice" class="select">
+            <optgroup label="American English - Female">
+              <option value="af_heart">Heart ⭐</option>
+              <option value="af_bella">Bella ⭐</option>
+              <option value="af_nicole">Nicole</option>
+              <option value="af_sarah">Sarah</option>
+              <option value="af_nova">Nova</option>
+              <option value="af_sky">Sky</option>
+              <option value="af_alloy">Alloy</option>
+              <option value="af_aoede">Aoede</option>
+              <option value="af_jessica">Jessica</option>
+              <option value="af_kore">Kore</option>
+              <option value="af_river">River</option>
+            </optgroup>
+            <optgroup label="American English - Male">
+              <option value="am_fenrir">Fenrir</option>
+              <option value="am_michael">Michael</option>
+              <option value="am_puck">Puck</option>
+              <option value="am_adam">Adam</option>
+              <option value="am_echo">Echo</option>
+              <option value="am_eric">Eric</option>
+              <option value="am_liam">Liam</option>
+              <option value="am_onyx">Onyx</option>
+              <option value="am_santa">Santa</option>
+            </optgroup>
+            <optgroup label="British English - Female">
+              <option value="bf_emma">Emma ⭐</option>
+              <option value="bf_isabella">Isabella</option>
+              <option value="bf_alice">Alice</option>
+              <option value="bf_lily">Lily</option>
+            </optgroup>
+            <optgroup label="British English - Male">
+              <option value="bm_george">George</option>
+              <option value="bm_lewis">Lewis</option>
+              <option value="bm_daniel">Daniel</option>
+              <option value="bm_fable">Fable</option>
+            </optgroup>
+            <optgroup label="Spanish">
+              <option value="ef_dora">Dora (Female)</option>
+              <option value="em_alex">Alex (Male)</option>
+              <option value="em_santa">Santa (Male)</option>
+            </optgroup>
+            <optgroup label="French">
+              <option value="ff_siwis">Siwis (Female) ⭐</option>
+            </optgroup>
+            <optgroup label="Hindi">
+              <option value="hf_alpha">Alpha (Female)</option>
+              <option value="hf_beta">Beta (Female)</option>
+              <option value="hm_omega">Omega (Male)</option>
+              <option value="hm_psi">Psi (Male)</option>
+            </optgroup>
+            <optgroup label="Italian">
+              <option value="if_sara">Sara (Female)</option>
+              <option value="im_nicola">Nicola (Male)</option>
+            </optgroup>
+            <optgroup label="Portuguese (Brazilian)">
+              <option value="pf_dora">Dora (Female)</option>
+              <option value="pm_alex">Alex (Male)</option>
+              <option value="pm_santa">Santa (Male)</option>
+            </optgroup>
+          </select>
+        </div>
+      </section>
+
+      <!-- Volume Setting -->
+      <section class="settings-section">
+        <div class="setting-row">
+          <div class="setting-info">
+            <label for="default-volume">Volume</label>
+            <span class="setting-description">Set the default playback volume</span>
+          </div>
+          <div class="volume-control">
+            <input type="range" id="default-volume" min="0" max="1" step="0.1" value="1" class="range">
+            <span id="volume-value">100%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playback Mode Setting -->
+      <section class="settings-section" id="playback-mode-section">
+        <div class="setting-row">
+          <div class="setting-info">
+            <label for="playback-mode">Playback Mode</label>
+            <span class="setting-description">How audio plays during text-to-speech conversion</span>
+          </div>
+          <select id="playback-mode" class="select">
+            <option value="streaming">Stream (play as generated)</option>
+            <option value="full">Wait for full audio</option>
+          </select>
+        </div>
+        <div class="setting-hint" id="playback-mode-hint">
+          <strong>Stream:</strong> Audio plays immediately as it's generated. Only Stop is available.<br>
+          <strong>Wait for full audio:</strong> Audio plays after complete conversion. Pause, replay, and speed control available.
+        </div>
+
+        <!-- Speed Setting (subsection, only active in full audio mode) -->
+        <div class="settings-subsection" id="speed-section">
+          <div class="setting-row">
+            <div class="setting-info">
+              <label for="playback-speed">Default Speed</label>
+              <span class="setting-description">Playback speed (only available in Full Audio mode)</span>
+            </div>
+            <select id="playback-speed" class="select">
+              <option value="0.5">0.5x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1.0x (Normal)</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2.0x</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Player Position Setting -->
+      <section class="settings-section">
+        <div class="setting-row">
+          <div class="setting-info">
+            <label for="player-position">Player Position</label>
+            <span class="setting-description">Where the player appears on the page</span>
+          </div>
+          <select id="player-position" class="select">
+            <option value="bottom-right" selected>Bottom Right</option>
+            <option value="bottom-left">Bottom Left</option>
+            <option value="top-right">Top Right</option>
+            <option value="top-left">Top Left</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Actions -->
+      <div class="actions-row">
+        <button class="btn btn-secondary" id="reset-settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+          Reset to Defaults
+        </button>
+        <button class="btn btn-primary" id="save-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Save Settings
+        </button>
+      </div>
+
+      <p class="save-status" id="save-status"></p>
+    </main>
+
+    <footer class="options-footer">
+      <a href="https://freevoicereader.com" target="_blank" class="website-link">freevoicereader.com</a>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
